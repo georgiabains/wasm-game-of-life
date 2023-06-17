@@ -37,6 +37,7 @@ jobs:
       # Save wasm build so that we can optionally deploy it without rebuilding
       - name: Save wasm dist artifact
         uses: actions/upload-artifact@v3
+        - run: mkdir -p wasm-game-of-life/dist
         with:
           name: wasm-game-of-life
           path: wasm-game-of-life/dist
