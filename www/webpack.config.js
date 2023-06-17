@@ -31,18 +31,18 @@ module.exports = {
       }
     ]
   },
-  resolveLoader: {
-    modules: [
-        path.join(__dirname, 'node_modules')
-    ]
-  },
+  // resolveLoader: {
+  //   modules: [
+  //       path.join(__dirname, 'node_modules')
+  //   ]
+  // },
   resolve: {
-    alias: {
-      components: path.resolve(__dirname, './node_modules')
-    },
+    // alias: {
+    //   components: path.resolve(__dirname, './node_modules')
+    // },
     extensions: ['.ts', '.js', '.wasm'],
-    modules: [
-      path.join(__dirname, 'node_modules')
-    ]
+    // modules: [
+    //   path.join(__dirname, 'node_modules')
+    // ]
   }
 };

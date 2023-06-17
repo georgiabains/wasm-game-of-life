@@ -23,7 +23,7 @@
   "author": "Georgia Bains",
   "homepage": "https://georgiabains.github.io/wasm-game-of-life/",
   "dependencies": {
-    "wasm-game-of-life": "file:../pkg/"
+    "wasm-game-of-life": "file:../pkg"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^8.1.0",
