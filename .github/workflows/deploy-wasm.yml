@@ -39,6 +39,8 @@ jobs:
 
       - name: NPM (including WASM) Build
         run: cd www && npm run build
+        env:
+          CI: false
 
         # Save wasm build so that we can optionally deploy it without rebuilding
       - name: Save wasm dist artifact
