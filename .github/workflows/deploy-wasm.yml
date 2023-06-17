@@ -34,11 +34,11 @@ jobs:
       - name: NPM install (latest)
         run: cd www && npm install npm@latest
 
-      - name: NPM (including WASM) Build
-        run: cd www && npm run build
-
       - name: Run tests
         run: cargo test --workspace
+
+      - name: NPM (including WASM) Build
+        run: cd www && npm run build
 
         # Save wasm build so that we can optionally deploy it without rebuilding
       - name: Save wasm dist artifact
