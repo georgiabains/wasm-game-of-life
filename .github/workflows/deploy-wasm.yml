@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: wasm-game-of-life
-          path: www
+          path: www/dist
           # if-no-files-found: error
 
   deploy:
@@ -62,12 +62,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: wasm-game-of-life
-          path: www
+          path: dist-for-deploy
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
-          build_dir: www
+          build_dir: dist-for-deploy
           keep_history: false
           jekyll: false
         env:
