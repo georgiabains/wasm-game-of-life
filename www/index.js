@@ -1,4 +1,4 @@
-import { Universe, Cell } from "wasm-game-of-life";
+import { Universe, Cell } from "../pkg/wasm_game_of_life.js";
 import { memory } from "../pkg/wasm_game_of_life_bg.wasm"
 import "./main.css"
 
