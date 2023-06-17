@@ -35,6 +35,6 @@
     "webpack-dev-server": "^4.0.0-beta.1"
   },
   "browser": {
-    "[module-name]": false
+    "wasm-game-of-life": false
   }
 }
