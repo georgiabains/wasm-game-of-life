@@ -23,6 +23,7 @@
   "author": "Georgia Bains",
   "homepage": "https://georgiabains.github.io/wasm-game-of-life/",
   "dependencies": {
+    "npm": "^9.7.1",
     "wasm-game-of-life": "file:../pkg"
   },
   "devDependencies": {

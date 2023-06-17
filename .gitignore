@@ -5,5 +5,4 @@ bin/
 wasm-pack.log
 .bin/
 node_modules
-package-lock.json
 .git
