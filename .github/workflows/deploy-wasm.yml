@@ -37,6 +37,9 @@ jobs:
       - name: Run tests
         run: cargo test --workspace
 
+      - name: Remove Extra Folder
+        run: workspace_path="${{ github.workspace }}"
+
       - name: NPM (including WASM) Build
         run: cd www && npm run build
         env:
