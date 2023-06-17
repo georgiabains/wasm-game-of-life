@@ -24,7 +24,7 @@
   "homepage": "https://georgiabains.github.io/wasm-game-of-life/",
   "dependencies": {
     "npm": "^9.7.1",
-    "wasm-game-of-life": "file:../pkg"
+    "wasm-game-of-life": "file:../pkg/"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^8.1.0",
