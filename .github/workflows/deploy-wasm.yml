@@ -1,6 +1,7 @@
 name: WASM Build, Test, Deploy
 
-permissions: {}
+permissions:
+  contents: write
 
 on:
   push:
