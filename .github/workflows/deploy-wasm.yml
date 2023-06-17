@@ -18,8 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: mkdir -p wasm-game-of-life/dist
-
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -36,14 +34,14 @@ jobs:
       - name: Run tests
         run: cargo test --workspace
 
-      # Save wasm build so that we can optionally deploy it without rebuilding
+        # Save wasm build so that we can optionally deploy it without rebuilding
       - name: Save wasm dist artifact
 
         uses: actions/upload-artifact@v3
         with:
           name: wasm-game-of-life
-          path: wasm-game-of-life/dist
-          if-no-files-found: error
+          path: dist-for-deploy
+          # if-no-files-found: error
 
   deploy:
     needs: build
@@ -63,7 +61,7 @@ jobs:
       - name: Download wasm dist artifact
         uses: actions/download-artifact@v3
         with:
-          name: wasm-dist
+          name: wasm-game-of-life
           path: dist-for-deploy
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
