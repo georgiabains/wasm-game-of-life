@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: wasm-dist
-          path: all-is-cubes-wasm/dist
+          path: wasm-game-of-life/dist
 
   deploy:
     needs: build
