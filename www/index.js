@@ -1,5 +1,5 @@
-import { Universe, Cell } from "wasm-game-of-life";
-import { memory } from "wasm-game-of-life/wasm_game_of_life_bg.wasm"
+import { Universe, Cell } from "./node_modules/wasm-game-of-life";
+import { memory } from "./node_modules/wasm-game-of-life/wasm_game_of_life_bg.wasm"
 import "./main.css"
 
 const CELL_SIZE = 5; // px
