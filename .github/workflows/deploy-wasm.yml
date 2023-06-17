@@ -86,4 +86,4 @@ jobs:
           keep_history: false
           jekyll: false
         env:
-          PAGES_TOKEN: ${{ secrets.PAGES_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
