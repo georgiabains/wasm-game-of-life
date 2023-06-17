@@ -67,3 +67,23 @@ matrix:
       - cargo check --target wasm32-unknown-unknown --no-default-features --features console_error_panic_hook
       # Note: no enabling the `wee_alloc` feature here because it requires
       # nightly for now.
+
+  - name: Page
+      rust: stable
+      before_script:
+        - curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh -s -- -f
+      install:
+        - *INSTALL_NODE_VIA_NVM
+      script:
+        - mkdir -p docs
+        - rm -rf ./docs/*
+        - wasm-pack build
+        - cd www && npm install
+        - npm run build
+        - mv ./dist/* ../docs
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $PAGES_TOKEN
+        local-dir: docs
+        keep-history: false
