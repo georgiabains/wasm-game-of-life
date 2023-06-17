@@ -32,7 +32,7 @@ jobs:
         run: CARGO_TARGET_DIR=`pwd`/target cargo install wasm-pack
 
       - name: NPM install
-        run: cd www && npm install npm@latest
+        run: cd www && npm ci
 
       - name: Run tests
         run: cargo test --workspace
