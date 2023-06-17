@@ -33,5 +33,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js', '.wasm'],
+    modules: [
+      path.join(__dirname, './node_modules')
+    ]
   }
 };
