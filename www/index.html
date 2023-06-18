@@ -15,7 +15,10 @@
       <div class="game__container">
         <div class="game__controls">
           <h2>Controls</h2>
-          <button class="play-pause" data-game="play-pause" type="button">pause</button>
+          <ul>
+            <li><button class="play-pause" data-game="play-pause" type="button">pause</button></li>
+            <li><label for="gameAnimaationSpped">Animation speed</label> <input id="gameAnimationSpeed" type="range"></li>
+          </ul>
         </div>
         <canvas data-game="canvas"></canvas>
       </div>
