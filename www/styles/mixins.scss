@@ -1,0 +1,8 @@
+@mixin centred {
+  margin: 0 auto;
+}
+
+@mixin heading-reset {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}

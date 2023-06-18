@@ -1,5 +1,14 @@
 .game {
   &__container {
     display: flex;
+    gap: 1rem;
+  }
+
+  &__controls {
+    border: 1px solid grey;
+  }
+
+  canvas {
+    max-width: 100%;
   }
 }
