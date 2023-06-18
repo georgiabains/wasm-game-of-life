@@ -6,17 +6,22 @@
     <base href="/">
   </head>
   <body>
-    <header>
+    <header class="header gutter">
       <h1>Conway's Game of Life</h1>
       <p>Coded using Rust compiled to WebAssembly and vanilla JS.</p>
     </header>
 
-    <main>
-      <button class="play-pause" data-game="play-pause" type="button"></button>
-      <canvas data-game="canvas"></canvas>
+    <main class="main gutter">
+
+      <div class="game__container">
+        <div class="game__controls">
+          <button class="play-pause" data-game="play-pause" type="button"></button>
+        </div>
+        <canvas data-game="canvas"></canvas>
+      </div>
     </main>
 
-    <footer>
+    <footer class="footer gutter">
       &copy; 2023 Georgia Bains
     </footer>
 
