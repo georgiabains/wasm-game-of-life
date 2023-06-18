@@ -2,7 +2,7 @@ import { Universe, Cell } from "../pkg/wasm_game_of_life.js";
 import { memory } from "../pkg/wasm_game_of_life_bg.wasm"
 require("./styles/styles.scss")
 
-const CELL_SIZE = 5; // px
+const CELL_SIZE = 9; // px
 const GRID_COLOR = "#CCCCCC";
 const DEAD_COLOR = "#FFFFFF";
 const ALIVE_COLOR = "#000000";
@@ -14,6 +14,8 @@ const height = universe.height()
 const canvas = document.querySelector('[data-game="canvas"]')
 canvas.height = (CELL_SIZE + 1) * height + 1
 canvas.width = (CELL_SIZE + 1) * width + 1
+
+canvas.imageSmoothingEnabled = false;
 
 const ctx = canvas.getContext('2d')
 
