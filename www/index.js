@@ -1,6 +1,6 @@
 import { Universe, Cell } from "../pkg/wasm_game_of_life.js";
 import { memory } from "../pkg/wasm_game_of_life_bg.wasm"
-import "./main.css"
+require("./main.scss")
 
 const CELL_SIZE = 5; // px
 const GRID_COLOR = "#CCCCCC";
@@ -20,7 +20,7 @@ const ctx = canvas.getContext('2d')
 let animationId = null
 
 const renderLoop = () => {
-  debugger;
+  // debugger;
   universe.tick()
 
   drawGrid()
