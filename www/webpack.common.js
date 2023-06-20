@@ -7,7 +7,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bootstrap.js",
   },
-  mode: "development",
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
@@ -19,18 +18,6 @@ module.exports = {
   ],
   experiments: {
     syncWebAssembly: true, // deprecated, see https://github.com/webpack/webpack/issues/11347
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(s(a|c)ss)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ]
-      }
-    ]
   },
   resolve: {
     extensions: ['.ts', '.js', '.wasm'],
