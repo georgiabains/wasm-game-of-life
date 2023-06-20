@@ -11,6 +11,8 @@ const universe = Universe.new()
 const width = universe.width()
 const height = universe.height()
 
+const dimensionArray = [...Array(height).keys()]
+
 const canvas = document.querySelector('[data-game="canvas"]')
 canvas.height = (CELL_SIZE + 1) * height + 1
 canvas.width = (CELL_SIZE + 1) * width + 1
@@ -60,24 +62,32 @@ const drawCells = () => {
 
   ctx.beginPath()
 
+  drawCell(cells, true)
+  drawCell(cells, false)
+
+  ctx.stroke();
+}
+
+const drawCell = (cells, isAlive) => {
+  ctx.fillStyle = isAlive ? ALIVE_COLOR : DEAD_COLOR;
+  const cellStatus = isAlive ? Cell.Alive : Cell.Dead
+
   for (let row = 0; row < height; row++) {
     for (let col = 0; col < width; col++) {
-      const idx = getIndex(row, col);
-
-      ctx.fillStyle = cells[idx] === Cell.Dead
-        ? DEAD_COLOR
-        : ALIVE_COLOR;
+      const idx = getIndex(row, col)
+      
+      if (cells[idx] !== cellStatus) {
+        continue
+      }
 
       ctx.fillRect(
         col * (CELL_SIZE + 1) + 1,
         row * (CELL_SIZE + 1) + 1,
         CELL_SIZE,
         CELL_SIZE
-      );
+      )
     }
   }
-
-  ctx.stroke();
 }
 
 const playPauseButton = document.querySelector('[data-game="play-pause"]')
