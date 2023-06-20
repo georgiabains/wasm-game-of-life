@@ -6,7 +6,7 @@ module.exports = merge(common, {
   mode: "production",
   devtool: 'source-map',
   output: {
-    publicPath: '/',
+    publicPath: '/wasm-game-of-life/',
   },
   experiments: {
     syncWebAssembly: true, // deprecated, see https://github.com/webpack/webpack/issues/11347
