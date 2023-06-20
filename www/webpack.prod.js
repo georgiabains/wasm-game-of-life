@@ -1,10 +1,13 @@
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
+const common = require('./webpack.common');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
-  entry: "./bootstrap.js",
   mode: "production",
+  devtool: 'source-map',
+  output: {
+    publicPath: './www/dist/',
+  },
   experiments: {
     syncWebAssembly: true, // deprecated, see https://github.com/webpack/webpack/issues/11347
   },

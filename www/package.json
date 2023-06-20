@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --open --config webpack.dev.js"
+    "start": "webpack serve --open --config webpack.dev.js --stats-error-details"
   },
   "repository": {
     "type": "git",
