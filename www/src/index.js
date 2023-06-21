@@ -2,7 +2,7 @@ import { Universe, Cell } from "../../pkg/wasm_game_of_life";
 import { memory } from "../../pkg/wasm_game_of_life_bg.wasm"
 require("../styles/styles.scss")
 
-const CELL_SIZE = 9; // px
+const CELL_SIZE = 5; // px
 const GRID_COLOR = "#CCCCCC";
 const DEAD_COLOR = "#FFFFFF";
 const ALIVE_COLOR = "#000000";
